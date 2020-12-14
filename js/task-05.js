@@ -43,5 +43,5 @@ switch (userCountry) {
     
     default: alert('В вашей стране доставка не доступна');
 }
-        alert(`Доставка в ${userCountry} будет стоить ${price} кредитов`)
+        // alert(`Доставка в ${userCountry} будет стоить ${price} кредитов`)
 
