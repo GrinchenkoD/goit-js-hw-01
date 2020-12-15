@@ -12,36 +12,35 @@
 
 let userCountry = prompt('Введите страну доставки');
 let price;
-userCountry = userCountry.toLowerCase()
-userCountry=userCountry[0].toUpperCase() + userCountry.substring(1)
+if (userCountry === null) {
+    alert("Отменено пользователем");
+} else {
+    userCountry = userCountry.toLowerCase();
+    userCountry = userCountry[0].toUpperCase() + userCountry.substring(1);
 
 
-switch (userCountry) {
-    case 'Китай':
-        price = 100;
-        alert(`Доставка в ${userCountry} будет стоить ${price} кредитов`)
-        break;
-    case 'Чили':
-        price = 250;
-        alert(`Доставка в ${userCountry} будет стоить ${price} кредитов`)
-        break;
-    case 'Австралия':
-        price = 170;
-        userCountry = "Австралию"
-        alert(`Доставка в ${userCountry} будет стоить ${price} кредитов`)
-        break;
-    case 'Индия':
-        price = 80;
-        userCountry="Индию"
-        alert(`Доставка в ${userCountry} будет стоить ${price} кредитов`)
-        break;
-    case 'Ямайка':
-        price = 120;
-        userCountry = "Ямайку"
-        alert(`Доставка в ${userCountry} будет стоить ${price} кредитов`)
-        break;
+
+    switch (userCountry) {
+        case 'Китай':
+            price = 100;
+            break;
+        case 'Чили':
+            price = 250;
+            break;
+        case 'Австралия':
+            price = 170;
+            userCountry = "Австралию"
+            break;
+        case 'Индия':
+            price = 80;
+            userCountry = "Индию"
+            break;
+        case 'Ямайка':
+            price = 120;
+            userCountry = "Ямайку"
+            break;
     
-    default: alert('В вашей стране доставка не доступна');
+        default: alert('В вашей стране доставка не доступна');
+    }
+    alert(`Доставка в ${userCountry} будет стоить ${price} кредитов`)
 }
-        // alert(`Доставка в ${userCountry} будет стоить ${price} кредитов`)
-

@@ -13,15 +13,21 @@
 let credits = 23580;
 const pricePerDroid = 3000;
 
-const droidValue = parseInt(prompt('Введите количество дроидов, которое хотите купить'));
-let totalPrice = pricePerDroid * droidValue;
+const droidValue =parseInt(prompt('Введите количество дроидов, которое хотите купить'));
 
-if (droidValue === null) {
-    console.log('Отменено пользователем');
-} else if (totalPrice>credits) {
-    console.log('Недостаточно средств на счету!');
-}
-else {
-    credits = credits - totalPrice;
-    console.log(`Вы купили ${droidValue} дроидов, на счету осалось ${credits} кредитов.`);
+if (Number.isNaN(droidValue)) {
+    alert("Было введено не число")
+} else {
+    
+    let totalPrice = pricePerDroid * droidValue;
+
+    if (droidValue === null) {
+        console.log('Отменено пользователем');
+    } else if (totalPrice > credits) {
+        console.log('Недостаточно средств на счету!');
+    }
+    else {
+        credits = credits - totalPrice;
+        console.log(`Вы купили ${droidValue} дроидов, на счету осалось ${credits} кредитов.`);
+    }
 }

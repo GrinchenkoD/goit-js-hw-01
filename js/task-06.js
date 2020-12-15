@@ -26,6 +26,6 @@ do {
 
     total += input;
 
-} while (true);
+} while (input!==null);
 
 alert(`Общая сумма чисел равна ${total}`);
