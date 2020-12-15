@@ -12,20 +12,21 @@
 
 let userCountry = prompt('Введите страну доставки');
 let price;
-if (userCountry === null) {
-    alert("Отменено пользователем");
-} else {
-    userCountry = userCountry.toLowerCase();
-    userCountry = userCountry[0].toUpperCase() + userCountry.substring(1);
 
-
+if (!userCountry) {
+      alert("Отменено пользователем");
+}else if (userCountry) {
+    userCountry = userCountry.toLowerCase()
 
     switch (userCountry) {
-        case 'Китай':
+
+        case 'китай':
             price = 100;
+            userCountry = "Китай"
             break;
-        case 'Чили':
+        case 'чили':
             price = 250;
+            userCountry = "Чили"
             break;
         case 'Австралия':
             price = 170;
