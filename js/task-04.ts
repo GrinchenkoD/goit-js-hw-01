@@ -10,22 +10,23 @@
 // 5 в противном случае необходимо посчитать остаток кредитов на счету и вывести сообщение
 // 'Вы купили [число] дроидов, на счету осталось [число] кредитов.'
 
-let credits = 23580;
-const pricePerDroid = 3000;
+let credits: number = 23580;
+const pricePerDroid: number = 3000;
 
-const droidValue =prompt('Введите количество дроидов, которое хотите купить');
-const totalPrice = pricePerDroid * droidValue;
+const droidValue: string = prompt(
+    'Введите количество дроидов, которое хотите купить',
+);
+const totalPrice: number = pricePerDroid * Number(droidValue);
 
-if (droidValue===null) {
+if (droidValue === null) {
     console.log('Отменено пользователем');
-
-} else if(!+droidValue){
-    alert("Было введено не число");
-
-} else if(pricePerDroid * droidValue < credits){
+} else if (!+droidValue) {
+    alert('Было введено не число');
+} else if (pricePerDroid * Number(droidValue) < credits) {
     credits = credits - totalPrice;
-    console.log(`Вы купили ${droidValue} дроидов, на счету осалось ${credits} кредитов.`);
-
+    console.log(
+        `Вы купили ${droidValue} дроидов, на счету осалось ${credits} кредитов.`,
+    );
 } else {
     console.log('Недостаточно средств на счету!');
 }

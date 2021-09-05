@@ -10,38 +10,38 @@
 // Индия - 80 кредитов
 // Ямайка - 120 кредитов
 
-let userCountry = prompt('Введите страну доставки');
-let price;
+let userCountry: string = prompt('Введите страну доставки');
+let price: number;
 
 if (!userCountry) {
-      alert("Отменено пользователем");
-}else if (userCountry) {
-    userCountry = userCountry.toLowerCase()
+    alert('Отменено пользователем');
+} else if (userCountry) {
+    userCountry = userCountry.toLowerCase();
 
     switch (userCountry) {
-
         case 'китай':
             price = 100;
-            userCountry = "Китай"
+            userCountry = 'Китай';
             break;
         case 'чили':
             price = 250;
-            userCountry = "Чили"
+            userCountry = 'Чили';
             break;
         case 'Австралия':
             price = 170;
-            userCountry = "Австралию"
+            userCountry = 'Австралию';
             break;
         case 'Индия':
             price = 80;
-            userCountry = "Индию"
+            userCountry = 'Индию';
             break;
         case 'Ямайка':
             price = 120;
-            userCountry = "Ямайку"
+            userCountry = 'Ямайку';
             break;
-    
-        default: alert('В вашей стране доставка не доступна');
+
+        default:
+            alert('В вашей стране доставка не доступна');
     }
-    alert(`Доставка в ${userCountry} будет стоить ${price} кредитов`)
+    alert(`Доставка в ${userCountry} будет стоить ${price} кредитов`);
 }
